@@ -11,7 +11,7 @@ class RedisClient(object):
         :param port: 端口
         :param password: 密码
         """
-        self.db = redis.StrictRedis(host=host, port=port, password=password, decode_responses=True)
+        self.db = redis.Redis(host=host, port=port, password=password, decode_responses=True)
         self.type = type
         self.website = website
 
@@ -78,5 +78,6 @@ class RedisClient(object):
 
 if __name__ == '__main__':
     conn = RedisClient('accounts', 'weibo')
-    result = conn.set('hell2o', 'sss3s')
-    print(result)
+    # result = conn.set('hell2o', 'sss3s')
+    # print(result)
+    print(conn.random())
