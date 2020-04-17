@@ -1,6 +1,7 @@
 import time
 from io import BytesIO
 from PIL import Image
+from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
@@ -228,5 +229,5 @@ class WeiboCookies():
 
 
 if __name__ == '__main__':
-    result = WeiboCookies('14773427930', 'x6pybpakq1').main()
-    print(result)
+    result = WeiboCookies('18258720901', 'jiang1593689***', browser=webdriver.Firefox())
+    print(result.main())

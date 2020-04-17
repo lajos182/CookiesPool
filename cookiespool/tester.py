@@ -34,6 +34,7 @@ class WeiboValidTester(ValidTester):
             return
         try:
             test_url = TEST_URL_MAP[self.website]
+            # allow_redirects表示是否允许重定向
             response = requests.get(test_url, cookies=cookies, timeout=5, allow_redirects=False)
             if response.status_code == 200:
                 print('Cookies有效', username)
