@@ -18,7 +18,7 @@ def get_conn():
     :return:
     """
     for website in GENERATOR_MAP:
-        print(website)
+        print('当前的网站是：', website)
         if not hasattr(g, website):
             setattr(g, website + '_cookies', eval('RedisClient' + '("cookies", "' + website + '")'))
             setattr(g, website + '_accounts', eval('RedisClient' + '("accounts", "' + website + '")'))
