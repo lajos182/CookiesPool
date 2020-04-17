@@ -34,6 +34,8 @@ class CookiesGenerator(object):
             self.browser.set_window_size(1400, 500)
         elif BROWSER_TYPE == 'Chrome':
             self.browser = webdriver.Chrome()
+        elif BROWSER_TYPE == 'Firefox':
+            self.browser = webdriver.Firefox()
     
     def new_cookies(self, username, password):
         """
